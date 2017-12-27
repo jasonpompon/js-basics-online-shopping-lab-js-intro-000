@@ -28,7 +28,7 @@ function viewCart() {
   // write your code here
   // loop over array of objects and print key value pairs in a string
 
-  var statement;
+  var statement = 'In your cart, you have';
 
   if (cart.length === 0) {
       statement = 'Your shopping cart is empty.';
@@ -40,7 +40,9 @@ function viewCart() {
       statement = `In your cart, you have ${Object.keys(cart[0]).join()} at $${Object.values(cart[0]).join()} and ${Object.keys(cart[1]).join()} at $${Object.values(cart[1]).join()}.`
       console.log(statement);
   } else {
-      
+      for (var i = 0; i < cart.length; i++) {
+          cart[i]
+      }
   }
 
   return statement;
