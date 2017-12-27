@@ -57,6 +57,7 @@ function viewCart() {
      }
 
       statement = statement + " " + itemsArr.join(" ")
+      console.log(statement)
   }
 
   return statement;
