@@ -40,9 +40,11 @@ function viewCart() {
       statement = `${statement} ${Object.keys(cart[0]).join()} at $${Object.values(cart[0]).join()} and ${Object.keys(cart[1]).join()} at $${Object.values(cart[1]).join()}.`
       console.log(statement);
   } else {
+      var itemsArr = []
       for (var i = 0; i < cart.length; i++) {
-          cart[i]
+          itemsArr.push(Object.keys(cart[i]).join() + " at " + Object.values(cart[i]).join())
       }
+      statement = statement + " " + itemsArr.join(", ") + "."
   }
 
   return statement;
