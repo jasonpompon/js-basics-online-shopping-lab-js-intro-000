@@ -41,10 +41,20 @@ function viewCart() {
       console.log(statement);
   } else {
       var itemsArr = []
+      var symbole = "";
+      
       for (var i = 0; i < cart.length; i++) {
-          itemsArr.push(Object.keys(cart[i]).join() + " at " + Object.values(cart[i]).join())
-      }
-      statement = statement + " " + itemsArr.join(", ") + "."
+    	if (Object.values(cart[i]).join() === Object.values(cart[cart.length - 2]).join()) { 
+        	symbole = " and"
+        } else if (Object.values(cart[i]).join() === Object.values(cart[cart.length - 1]).join()) {
+        	symbole = "."
+        } else {
+        	symbole = ","
+        }
+        	itemsArr.push(Object.keys(cart[i]).join() + " at " + Object.values(cart[i]).join() + `${symbole}`)
+        }
+        
+      statement = statement + " " + itemsArr.join(" ")
   }
 
   return statement;
