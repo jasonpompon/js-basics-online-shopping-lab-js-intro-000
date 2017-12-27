@@ -34,10 +34,10 @@ function viewCart() {
       statement = 'Your shopping cart is empty.';
       console.log(statement);
   } else if (cart.length === 1) {
-      statement = `In your cart, you have ${Object.keys(cart[0]).join()} at $${Object.values(cart[0]).join()}.`
+      statement = `${statement} ${Object.keys(cart[0]).join()} at $${Object.values(cart[0]).join()}.`
       console.log(statement);
   } else if (cart.length === 2) {
-      statement = `In your cart, you have ${Object.keys(cart[0]).join()} at $${Object.values(cart[0]).join()} and ${Object.keys(cart[1]).join()} at $${Object.values(cart[1]).join()}.`
+      statement = `${statement} ${Object.keys(cart[0]).join()} at $${Object.values(cart[0]).join()} and ${Object.keys(cart[1]).join()} at $${Object.values(cart[1]).join()}.`
       console.log(statement);
   } else {
       for (var i = 0; i < cart.length; i++) {
@@ -64,18 +64,18 @@ function total() {
 function removeFromCart(item) {
   // write your code here
   // for (let i = 0; i < cart.length; i++) {
-  // 
-  // 
-  // 
-  // 
-  // 
+  //
+  //
+  //
+  //
+  //
   //     if (cart[i].hasOwnProperty(item)) {
   //         cart = [...cart.slice(0,i),...cart.slice(i+1)]
   //     } else if (cart[i].hasOwnProperty(item) === false) {
   //         console.log('That item is not in your cart.');
   //     }
   // }
-  // 
+  //
   // return cart
 }
 
