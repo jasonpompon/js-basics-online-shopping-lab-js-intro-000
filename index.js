@@ -89,7 +89,7 @@ function removeFromCart(item) {
 
           if (cart[i].hasOwnProperty(item)) {
               cart = [...cart.slice(0,i),...cart.slice(i+1)]
-          } 
+          }
 
       }
   } else {
