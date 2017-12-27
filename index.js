@@ -39,7 +39,7 @@ function viewCart() {
   } else if (cart.length === 2) {
       statement = `${statement} ${Object.keys(cart[0]).join()} at $${Object.values(cart[0]).join()} and ${Object.keys(cart[1]).join()} at $${Object.values(cart[1]).join()}.`
       console.log(statement);
-  } else {
+  } else if (cart.length > 2) {
       var itemsArr = []
       var symbole = "";
 
