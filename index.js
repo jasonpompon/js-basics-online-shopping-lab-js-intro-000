@@ -44,7 +44,7 @@ function viewCart() {
       var symbole = "";
 
       for (var i = 0; i < cart.length; i++) {
-          
+
     	if (Object.values(cart[i]).join() === Object.values(cart[cart.length - 2]).join()) {
         	symbole = ", and"
         } else if (Object.values(cart[i]).join() === Object.values(cart[cart.length - 1]).join()) {
