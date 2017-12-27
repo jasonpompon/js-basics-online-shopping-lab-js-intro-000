@@ -56,7 +56,8 @@ function viewCart() {
         itemsArr.push(Object.keys(cart[i]).join() + " at " + "$" + Object.values(cart[i]).join() + `${symbole}`)
      }
 
-      statement = statement + " " + itemsArr.join(" ")
+      statement = statement + " " + itemsArr.join(" ");
+      console.log(statement);
   }
 
   return statement;
