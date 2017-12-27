@@ -42,9 +42,9 @@ function viewCart() {
   } else {
       var itemsArr = []
       var symbole = "";
-      
+
       for (var i = 0; i < cart.length; i++) {
-    	if (Object.values(cart[i]).join() === Object.values(cart[cart.length - 2]).join()) { 
+    	if (Object.values(cart[i]).join() === Object.values(cart[cart.length - 2]).join()) {
         	symbole = " and"
         } else if (Object.values(cart[i]).join() === Object.values(cart[cart.length - 1]).join()) {
         	symbole = "."
@@ -53,7 +53,7 @@ function viewCart() {
         }
         	itemsArr.push(Object.keys(cart[i]).join() + " at " + Object.values(cart[i]).join() + `${symbole}`)
         }
-        
+
       statement = statement + " " + itemsArr.join(" ")
   }
 
